@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Kimani | Portfolio</title>
     <style>
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,12 +21,17 @@
             background: #f4f4f4;
         }
         header {
-            background: #222;
+            background: transparent;
             color: #fff;
             padding: 1.5rem 2rem 1rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
         }
         .brand {
             display: flex;
@@ -44,6 +57,7 @@
             padding: 0.75rem 1.5rem;
             border-radius: 30px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-right: 2rem;
         }
         nav a {
             color: #fff;
@@ -58,6 +72,16 @@
             background: #fff;
             color: #222;
         }
+        header nav {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+        header:hover nav,
+        header:focus-within nav {
+            opacity: 1;
+            pointer-events: auto;
+        }
         main {
             max-width: 800px;
             margin: 2rem auto;
@@ -71,34 +95,103 @@
             padding: 1rem 0;
             background: #222;
             color: #fff;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
+        }
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: 
+                linear-gradient(rgba(34,34,34,0.7), rgba(34,34,34,0.7)),
+                url('KDB.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            z-index: 1;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .hero-content {
+            padding: 4rem 2rem;
+            max-width: 95vw;
+            box-sizing: border-box;
+        }
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            margin-top: -40px;
+            border: none;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            background: #eee;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .highlight {
+            color: #06f;
+        }
+        .hero-tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero-btn {
+            background: #06f;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .hero-btn:hover {
+            background: #005bb5;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="brand">
-            <div class="brand-icon">PK</div>
+        <nav>
+            <div class="brand">
+            <div class="brand-icon">
+                <img src="WhatsApp Image 2024-05-24 at 20.00.15_4a1bdcf5.jpg" alt="Peter Kimani" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
             <div>
                 <h1 style="margin:0;">Peter Kimani</h1>
             </div>
         </div>
-        <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="WhatsApp Image 2024-05-24 at 20.00.15_4a1bdcf5.jpg" alt="Peter Kimani" class="hero-img">
+            <h1>Hi, I'm <span class="highlight">Peter Kimani</span></h1>
+            <p class="hero-tagline">Computer Science Student<br>Life-loyal cityzen <br>#CTID</p>
+            <a href="#projects" class="hero-btn">View My Work</a>
+        </div>
+    </section>
+
     <main>
         <section id="about">
             <h1 style="text-align: center;">Welcome to my portfolio</h1>
             <h2>About Me</h2>
             <p>
-                I am an ongoing computer science student. My goal is to continuously learn and grow in the field of technology. My interests are in cybersecurity and networking. Despite this, I enjoy making software applications that challenge me in innovation and problem solving. My preferred tech stack is Javascript and Python.<br> <br>
-                However, my passions extend beyond technology.  <br> <br>
-                I like going on hikes, playing football, and traveling to new areas when I have free time. These experiences, in my opinion, not only improve my physical health but also help me appreciate the great outdoors.<br> <br>
+                I am an ongoing computer science student. My goal is to continuously learn and grow in the field of technology. My interests are in cybersecurity and networking. Despite this, I enjoy making software applications that challenge me in innovation and problem solving. My preferred tech stack is Javascript and Python.<br><br>
+                However, my passions extend beyond technology.<br><br>
+                I like going on hikes, playing football, and traveling to new areas when I have free time. These experiences, in my opinion, not only improve my physical health but also help me appreciate the great outdoors.<br><br>
                 Occasionally, I enjoy gaming as it gives me an escape from the real world. 
             </p>
         </section>
