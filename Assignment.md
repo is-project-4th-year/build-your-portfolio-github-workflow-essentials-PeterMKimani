@@ -13,8 +13,6 @@
 
 ## 3. Learnings from the Git Crash Program
 
-List at least **four key concepts or skills** you learned during the Git crash course. For each one, write a brief explanation of how it helped you manage your portfolio project more effectively.
-
   **Branching**: Helped me separate different features like the navbar and hero section, allowing me to work on them independently without affecting the main project. This kept the development organized and conflict-free.
 
   **Commit Messages**: I learned how to write clear, meaningful commit messages using conventional formats like feat, fix, and docs. This made it easier to track changes and understand the history of the project.
@@ -25,42 +23,33 @@ List at least **four key concepts or skills** you learned during the Git crash c
 
 ## 4. Screenshots of Key GitHub Features
 
-Include screenshots that demonstrate how you used GitHub to manage your project. For each screenshot, write a short caption explaining what it shows.
+![Branch Creation](screenshots/Branch%20Creation.png)  
+*This screenshot shows the creation of a new feature branch from the terminal. It helped me separate work on different sections of the project like the navbar and hero.*
 
-> Upload the screenshots to your GitHub repository and reference them here using Markdown image syntax:
-> (you could just simply copy and paste the image into the Assignment.md)
-![Branch Creation](screenshots/branch-creation.png)  
-*This screenshot shows the creation of a new feature branch from the GitHub UI. It helped me separate work on different sections of the project like the navbar and hero.*
-
-![Pull Request](screenshots/pull-request.png)  
+![Pull Request](screenshots/Pull%20Request.png)  
 *This screenshot displays a pull request I made to merge a feature branch into the main branch. I used PRs to review changes and avoid conflicts.*
 
-![Commit History](screenshots/commit-history.png)  
+![Commit History](screenshots/Commit_history.png)  
 *Here is the commit history showing clear, structured messages using conventional commits like `feat`, `fix`, and `docs`, which made it easier to track project progress.*
 
-![GitHub Pages Setup](screenshots/github-pages-setup.png)  
+![GitHub Pages Setup](screenshots/Github.png)  
 *This screenshot shows how I configured GitHub Pages to host my portfolio site from the `main` branch, making it accessible online.*
-
-
-```markdown
-![Caption](path/to/your/image.png)
-```
 
 ### A. Milestones and Issues
 
-- Screenshot showing your milestone(s) and the issues linked to it.
+![Milestones and Issues](screenshots/Milestones-and-Issues.png)
 
 ### B. Project Board
 
-- Screenshot of your GitHub Project Board with issues organized into columns (e.g., To Do, In Progress, Done).
+![Project Board](screenshots/Project-board.png)
 
 ### C. Branching
 
-- Screenshot showing your branch list with meaningful naming.
+![Branching](screenshots/Branches.png)
 
 ### D. Pull Requests
 
-- Screenshot of a pull request that’s either open or merged and linked to a related issue.
+![Pull Requests](screenshots/Pull_request.png)
 
 ### E. Merge Conflict Resolution
 
