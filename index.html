@@ -155,6 +155,83 @@
         .hero-btn:hover {
             background: #005bb5;
         }
+        .main-section {
+            background: rgba(255,255,255,0.85);
+            margin: 2rem 0;
+            padding: 2rem 2rem 1.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            max-width: 800px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            transition: box-shadow 0.2s;
+        }
+        .main-section:not(:last-child) {
+            border-bottom: 4px solid #e0e7ef;
+        }
+        .about-section h2,
+        .projects-section h2,
+        .contact-section h2 {
+            color: #005bb5;
+            margin-top: 0.5rem;
+        }
+        .projects-section ul {
+            padding-left: 1.2rem;
+            margin: 1rem 0 0 0;
+        }
+        .projects-section li {
+            margin-bottom: 0.7rem;
+            font-size: 1.08rem;
+        }
+        .contact-section a {
+            color: #06f;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .main-section:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .project-card {
+            background: rgba(240, 247, 255, 0.95);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 1.2rem 1.5rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .project-card:hover {
+            box-shadow: 0 6px 24px rgba(31,38,135,0.13);
+            transform: translateY(-4px) scale(1.02);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #005bb5;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 0.7rem;
+            background: #06f;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .project-link:hover {
+            background: #005bb5;
+        }
+        @media (max-width: 600px) {
+            .project-card {
+                padding: 1rem 0.7rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -185,28 +262,42 @@
     </section>
 
     <main>
-        <section id="about">
+        <section class="main-section about-section" id="about">
             <h1 style="text-align: center;">Welcome to my portfolio</h1>
             <h2>About Me</h2>
             <p>
-                I am an ongoing computer science student. My goal is to continuously learn and grow in the field of technology. My interests are in cybersecurity and networking. Despite this, I enjoy making software applications that challenge me in innovation and problem solving. My preferred tech stack is Javascript and Python.<br><br>
+                I am an ongoing computer science student. My goal is to continuously learn and grow in the field of technology. My interests are in software development, cybersecurity and networking.<br><br>
                 However, my passions extend beyond technology.<br><br>
-                I like going on hikes, playing football, and traveling to new areas when I have free time. These experiences, in my opinion, not only improve my physical health but also help me appreciate the great outdoors.<br><br>
-                Occasionally, I enjoy gaming as it gives me an escape from the real world. 
+                I like going on hikes, playing football, and traveling to new areas when I have free time. These experiences, not only improve my physical health but also help me appreciate the great outdoors.<br><br>
+                I enjoy gaming as it gives me an escape from the real world as well as cooking.<br><br>
+                I also enjoy cooking. For me, it's more than just food, it is a form of art: a mix of precision, experimentation, and storytelling. Just like in software development, I enjoy taking raw ingredients—whether code or spices—and turning them into something meaningful and memorable. 
             </p>
         </section>
-        <section id="projects">
+        <section class="main-section projects-section" id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li>E-Waste-Shop - an online e-commerce platform for inventory management in the electronics market</li>
-                <li>Bus reservation - a website that entails a booking system for buses.</li>
-                <li>End-To-End-Encrypted-Chat-Client -  a secure, end-to-end encrypted chat client</li>
-            </ul>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>E-Waste-Shop</h3>
+                    <p>An online e-commerce platform for inventory management in the electronics market.</p>
+                    <a href="https://github.com/BeldiKamuha/e_waste_shop-system" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Bus Reservation</h3>
+                    <p>A website that entails a booking system for buses.</p>
+                    <a href="https://github.com/Alvin-21/bus-reservation" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>End-To-End-Encrypted-Chat-Client</h3>
+                    <p>A secure, end-to-end encrypted chat client.</p>
+                    <a href="https://github.com/barasamichael/End-To-End-Encrypted-Chat-Client" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
         </section>
-        <section id="contact">
+        <section class="main-section contact-section" id="contact">
             <h2>Contact</h2>
             <p>
-                Email: <a href="mailto:your.email@example.com">njau.kimani@strathmore.edu</a>
+                Email: <a href="mailto:your.email@example.com">njau.kimani@strathmore.edu</a> <br><br>
+                GitHub: <a href="https://github.com/PeterMKimani" target="_blank">PeterMKimani</a>
             </p>
         </section>
     </main>
